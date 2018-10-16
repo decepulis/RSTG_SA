@@ -1,0 +1,174 @@
+% LaTeX template for thesis and dissertation ETDs
+% Created by Benjamin Hilburn ( bhilburn@vt.edu )
+
+\documentclass[pdftex,12pt,onecolumn]{report}
+
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.1in}
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{2}
+
+\usepackage{cite}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{textcomp}
+
+\usepackage{palatino}
+\fontsize{12}{14}
+
+\usepackage[pdftex]{graphicx}
+\usepackage[center]{caption}
+\usepackage{float}
+\graphicspath{{./images/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+
+\usepackage{longtable}
+
+\renewcommand{\arraystretch}{1.5}
+
+\usepackage[cmex10]{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+
+\usepackage{listings}
+\usepackage{csvsimple}
+
+\usepackage{array}
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+
+
+\usepackage[font=footnotesize]{subfig}
+\usepackage{url}
+
+
+\usepackage[breaklinks]{hyperref}
+\hypersetup{
+    unicode=true,         							% non-Latin characters
+    pdftoolbar=true,								% show Acrobat’s toolbar?
+    pdfmenubar=false,								% show Acrobat’s menu?
+    pdffitwindow=false,								% window fit to page on open
+    pdftitle={Creating Socio-Technical Patches for Information Foraging: A Requirements Traceability Case Study},			% title
+    pdfauthor={Darius Cepulis},						% author
+    pdfsubject={M.S. Thesis of Computer Science},	% subject
+    pdfcreator={Darius Cepulis},					% creator of the document
+    pdfnewwindow=true,								% links in new window
+    colorlinks=true,								% false: boxed links; true: colored links
+}
+\urlstyle{same}
+
+\begin{document}
+
+\thispagestyle{empty}
+\pagenumbering{roman}
+\begin{center}
+{\Large 
+Creating Socio-Technical Patches for Information Foraging: \\ A Requirements Traceability Case Study
+}
+\vfill
+Darius Cepulis \\
+B.S. Computer Engineering, University of Cincinnati, 2018
+\vfill
+Dr. Nan Niu, Chair \\
+Dr. Carla Purdy \\
+Dr. Chia Han  
+\vfill
+Thesis submitted to the Faculty of the \\
+University of Cincinnati  College of Engineering and Applied Science \\
+in partial fulfillment of the requirements for the degree of
+\vfill
+Master of Science \\
+in \\
+Computer Science
+\vfill
+July 13th, 2018 \\
+Cincinnati, OH
+\end{center}
+\pagebreak
+
+
+\thispagestyle{empty}
+\begin{singlespace}
+\begin{center}
+{\large Creating Socio-Technical Patches for Information Foraging: \\ A Requirements Traceability Case Study}
+\\
+Darius Cepulis
+\vfill
+ABSTRACT
+\end{center}
+Work in information foraging theory presumes that software developers have a predefined patch of information (e.g., a Java class) within which they conduct a search task. However, not all tasks have easily delineated patches. Requirements traceability, where a developer must traverse a combination of technical artifacts and social structures, is one such task. We examine requirements socio-technical graphs to describe the key relationships that a patch should encode to assist in a requirements traceability task. We then present an algorithm, based on spreading activation, which extracts a relevant set of these relationships as a patch. We test this algorithm in requirements repositories of four open-source software projects. Our results show that applying this algorithm creates useful patches with reduced superfluous information. 
+\\
+Keywords: Information foraging theory, Spreading activation, Requirements Traceability
+\vfill
+\pagebreak
+\begin{center}
+\vfill
+Copyright 2018, Darius Cepulis
+\end{center}
+\pagebreak
+\end{singlespace}
+
+
+\chapter*{Acknowledgments}
+A big thanks to Kristin, who turned my doodles into figures while I was furiously writing.\\\\
+A huge thanks to Dr. Niu's research team, who put together an enormous and useful database and answer set. All I had to do was query.\\\\
+Finally, an enormous thanks to Dr. Niu, who provided the ideas that formed the backbone of this paper, and the guidance that made sure it got done.
+
+\chapter*{Dedication}
+
+To Kristin, Stefan, Mom, Dad, Alex, Ryan, Stack Overflow, Audrey, Sofia, and iOS 12.
+
+\tableofcontents
+\pagebreak
+\pagebreak
+
+\listoffigures
+\pagebreak
+
+\listoftables
+\pagebreak
+
+\pagenumbering{arabic}
+\pagestyle{myheadings}
+
+\chapter{Introduction}
+\markright{1. Introduction \hfill }
+\input{1.Introduction}
+
+\chapter{Background}
+\markright{2. Background \hfill}
+\input{2.Background}
+
+\chapter{Examining Requirements Socio-Technical Graphs}
+\markright{3. Examining RSTGs \hfill}
+\input{3.Graphs}
+
+\chapter{Creating Socio-Technical Patches for Information Foraging}
+\markright{4. Creating Patches \hfill}
+\input{4.Patches}
+
+\chapter{Future Work}
+\markright{5. Future Work \hfill}
+\input{5.Future}
+
+\chapter{Discussions}
+\markright{6. Discussions \hfill}
+\input{6.Conclusion}
+
+\bibliographystyle{IEEEtran}
+\addcontentsline{toc}{chapter}{Bibliography}
+\markright{Cepulis \hfill Bibliography \hfill}
+\bibliography{IEEEabrv,thesis.bib}
+
+\pagebreak
+\appendix
+\addcontentsline{toc}{chapter}{Appendices}
+\markright{Cepulis \hfill Appendices \hfill}
+\input{7.Appendix}
+
+\end{document}
